@@ -28,6 +28,7 @@ if (mobileNavigatorObject && mobileNavigatorObject.usb) {
 }
 
   try {
+  // @ts-ignore
     device =  await navigator.usb.requestDevice({ filters: [{
       vendorId: 0x054c,
       protocolCode: 0x01
