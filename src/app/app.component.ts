@@ -27,16 +27,14 @@ export class AppComponent {
     }
 
     try {
-      /*  // @ts-ignore
-          device =  await navigator.usb.requestDevice({ filters: [{
-            vendorId: 0x054c,
-            protocolCode: 0x01
-          }]});*/
       // @ts-ignore
       device = await navigator.usb.requestDevice({
         filters: [
           {
             vendorId: 0x054c,
+            protocolCode: 0x01,
+            classCode: 0xFF,
+            subclassCode: 0x00,
           }],
       });
       console.log('open');
